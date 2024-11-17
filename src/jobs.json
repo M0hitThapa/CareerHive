@@ -1,0 +1,303 @@
+[
+  {
+    "id": "1",
+    "title": "Senior React Developer",
+    "type": "Full-Time",
+    "description": "We are seeking a talented Front-End Developer to join our team in Boston, MA. The ideal candidate will have strong skills in HTML, CSS, and JavaScript, with experience working with modern JavaScript frameworks such as React or Angular.",
+    "location": "Boston, MA",
+    "salary": "$70K - $80K",
+    "imageUrl":"https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/270830/react_job-b301cbe1ba595f57755d4f229405fafe-214c270ddf2c6b63258f59a93598be98.png",
+    "company": {
+      "name": "NewTek Solutions",
+      "description": "NewTek Solutions is a leading technology company specializing in web development and digital solutions. We pride ourselves on delivering high-quality products and services to our clients while fostering a collaborative and innovative work environment.",
+      "contactEmail": "contact@teksolutions.com",
+      "contactPhone": "555-555-5555"
+      
+    }
+  },
+  {
+    "id": "2",
+    "title": "UX Designer",
+    "type": "Contract",
+    "description": "Seeking a creative UX Designer with experience in user-centered design processes to improve user experiences. Must be familiar with wireframing and prototyping tools like Figma and Adobe XD.",
+    "location": "Remote",
+    "salary": "$50K - $60K",
+    "imageUrl":"https://th.bing.com/th/id/R.a8301849462048c8f1998444edbd695c?rik=0wj8xgiA%2b%2fjHmg&riu=http%3a%2f%2fuploaddeimagens.com.br%2fimages%2f000%2f191%2f345%2foriginal%2fux-big.jpg&ehk=c%2boYaGaVGPD1ttnTJker%2f4Ijt%2fgf0jTk6lWnBmg1r3M%3d&risl=&pid=ImgRaw&r=0",
+    "company": {
+      "name": "Creative Cloud Ltd",
+      "description": "Creative Cloud Ltd is an award-winning design agency focused on delivering engaging user experiences for brands worldwide.",
+      "contactEmail": "hr@creativecloud.com",
+      "contactPhone": "555-123-4567"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Data Scientist",
+    "type": "Full-Time",
+    "description": "We are looking for a Data Scientist with experience in Python, R, and machine learning models to support data-driven decisions within our company.",
+    "location": "San Francisco, CA",
+    "salary": "$90K - $120K",
+    "imageUrl":"https://th.bing.com/th/id/R.392769bfec620bc68adac5c08baba785?rik=T7nbZk4NKR7Rew&pid=ImgRaw&r=0",
+    "company": {
+      "name": "DataX Analytics",
+      "description": "DataX Analytics provides advanced analytics and machine learning solutions, helping businesses unlock the full potential of their data.",
+      "contactEmail": "jobs@datax.com",
+      "contactPhone": "555-987-6543"
+    }
+  },
+  {
+    "id": "4",
+    "title": "Marketing Specialist",
+    "type": "Part-Time",
+    "description": "Join our team as a Marketing Specialist to develop and execute marketing strategies. Ideal candidates have experience in digital marketing and content creation.",
+    "location": "Austin, TX",
+    "salary": "$40K - $50K",
+    "imageUrl":"https://www.ondeck.com/wp-content/uploads/sites/5/2017/07/marketing-specialist.jpg",
+    "company": {
+      "name": "BrightSpark Marketing",
+      "description": "BrightSpark Marketing is a dynamic marketing agency focused on innovative strategies and content for fast-growing businesses.",
+      "contactEmail": "contact@brightspark.com",
+      "contactPhone": "555-321-9876"
+    }
+  },
+  {
+    "id": "5",
+    "title": "Backend Engineer",
+    "type": "Full-Time",
+    "description": "Hiring a Backend Engineer with expertise in Node.js and Python. You’ll work closely with the frontend team to build scalable backend services.",
+    "location": "Seattle, WA",
+    "salary": "$85K - $95K",
+    "imageUrl":"https://th.bing.com/th/id/OIP.cJxZvYYdXmY5-6liOg2foQHaE8?rs=1&pid=ImgDetMain",
+    "company": {
+      "name": "Tech Solutions Inc.",
+      "description": "Tech Solutions Inc. is a leader in software development, delivering high-quality solutions for clients in various industries.",
+      "contactEmail": "tech@solutionsinc.com",
+      "contactPhone": "555-765-4321"
+    }
+  },
+  {
+    "id": "6",
+    "title": "Product Manager",
+    "type": "Full-Time",
+    "description": "Looking for a Product Manager with experience in product lifecycle management to guide our product development teams and strategies.",
+    "location": "Chicago, IL",
+    "salary": "$100K - $120K",
+    "imageUrl":"https://th.bing.com/th/id/OIP.9lkrswCm9M00aDOuU-7ssgHaE4?rs=1&pid=ImgDetMain",
+    "company": {
+      "name": "NextGen Innovations",
+      "description": "NextGen Innovations is a technology company that develops cutting-edge software products for various industries.",
+      "contactEmail": "careers@nextgen.com",
+      "contactPhone": "555-654-3210"
+    }
+  },
+  {
+    "id": "7",
+    "title": "IT Support Specialist",
+    "type": "Full-Time",
+    "description": "Provide technical support to end-users, troubleshoot issues, and maintain IT systems. Experience in customer service and IT support required.",
+    "location": "Denver, CO",
+    "salary": "$45K - $55K",
+    "imageUrl":"https://th.bing.com/th/id/R.ed69077f8d7da634395ca8be0aceeca8?rik=85glYDD4qSa6ZA&pid=ImgRaw&r=0",
+    "company": {
+      "name": "SupportPlus",
+      "description": "SupportPlus specializes in IT support solutions, helping clients maintain and optimize their technology infrastructure.",
+      "contactEmail": "info@supportplus.com",
+      "contactPhone": "555-098-7654"
+    }
+  },
+  {
+    "id": "8",
+    "title": "Content Writer",
+    "type": "Freelance",
+    "description": "We are seeking a talented content writer with a passion for storytelling. You will be responsible for creating blog posts, social media content, and articles.",
+    "location": "Remote",
+    "salary": "$20 - $30 per hour",
+    "imageUrl":"https://th.bing.com/th/id/R.270f2f7670de9b326475d3792ea99cd4?rik=qN9yo%2f1ThCaWKQ&pid=ImgRaw&r=0",
+    "company": {
+      "name": "ContentCraft",
+      "description": "ContentCraft is a content agency helping brands build engaging digital stories through written content.",
+      "contactEmail": "writing@contentcraft.com",
+      "contactPhone": "555-321-4321"
+    }
+  },
+  {
+    "id": "9",
+    "title": "Graphic Designer",
+    "type": "Contract",
+    "description": "A contract position for a Graphic Designer to produce visual content for marketing and branding projects. Must have experience with Adobe Suite.",
+    "location": "Los Angeles, CA",
+    "salary": "$60K - $70K",
+    "imageUrl":"https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1688392923/catalog/1675844538828255232/k7hjkdjoslsaj2lauryy.jpg",
+    "company": {
+      "name": "VisualMedia Group",
+      "description": "VisualMedia Group specializes in creative services for global brands, focusing on visually stunning digital media and branding.",
+      "contactEmail": "design@visualmedia.com",
+      "contactPhone": "555-654-1234"
+    }
+  },
+  {
+    "id": "10",
+    "title": "Customer Success Manager",
+    "type": "Full-Time",
+    "description": "Seeking a Customer Success Manager to manage client relationships and ensure customer satisfaction. Experience in account management and customer service required.",
+    "location": "New York, NY",
+    "salary": "$65K - $75K",
+    "imageUrl":"",
+    "company": {
+      "name": "ClientFirst Solutions",
+      "description": "ClientFirst Solutions is dedicated to helping businesses achieve their goals through excellent customer service and account management.",
+      "contactEmail": "success@clientfirst.com",
+      "contactPhone": "555-432-1234"
+    }
+  },
+  {
+    "id": "11",
+    "title": "DevOps Engineer",
+    "type": "Full-Time",
+    "description": "Seeking a DevOps Engineer with experience in cloud platforms (AWS or Azure) and CI/CD pipelines to help automate our infrastructure.",
+    "location": "Dallas, TX",
+    "salary": "$95K - $105K",
+    "imageUrl":"",
+    "company": {
+      "name": "CloudBase Solutions",
+      "description": "CloudBase Solutions provides cloud infrastructure services to a variety of industries, helping clients transition to scalable cloud solutions.",
+      "contactEmail": "jobs@cloudbasesolutions.com",
+      "contactPhone": "555-112-3344"
+    }
+  },
+  {
+    "id": "12",
+    "title": "Salesforce Administrator",
+    "type": "Full-Time",
+    "description": "Looking for a certified Salesforce Administrator to manage and maintain our Salesforce CRM, ensuring optimal performance and user support.",
+    "location": "Atlanta, GA",
+    "salary": "$60K - $70K",
+    "imageUrl":"",
+    "company": {
+      "name": "CRMExperts",
+      "description": "CRMExperts specializes in CRM management and consulting, providing solutions to streamline business operations.",
+      "contactEmail": "admin@crmexperts.com",
+      "contactPhone": "555-223-4455"
+    }
+  },
+  {
+    "id": "13",
+    "title": "Operations Manager",
+    "type": "Full-Time",
+    "description": "Seeking an Operations Manager to oversee daily operations, improve processes, and manage teams. Experience in logistics or supply chain preferred.",
+    "location": "Nashville, TN",
+    "salary": "$80K - $90K",
+    "imageUrl":"",
+    "company": {
+      "name": "LogiPro Inc.",
+      "description": "LogiPro Inc. provides logistics and supply chain solutions, optimizing transportation and distribution processes for our clients.",
+      "contactEmail": "careers@logipro.com",
+      "contactPhone": "555-334-5566"
+    }
+  },
+  {
+    "id": "14",
+    "title": "Customer Support Specialist",
+    "type": "Part-Time",
+    "description": "Join our team as a Customer Support Specialist to assist customers via chat and phone. Experience with customer support tools like Zendesk is a plus.",
+    "location": "Remote",
+    "salary": "$18 - $25 per hour",
+    "imageUrl":"",
+    "company": {
+      "name": "HelpDesk Heroes",
+      "description": "HelpDesk Heroes provides customer support solutions, helping businesses ensure smooth and efficient customer service.",
+      "contactEmail": "support@helpdeskheroes.com",
+      "contactPhone": "555-556-6677"
+    }
+  },
+  {
+    "id": "15",
+    "title": "Project Coordinator",
+    "type": "Contract",
+    "description": "Looking for a Project Coordinator to assist with scheduling, resource management, and project tracking. PMP certification is a plus.",
+    "location": "Phoenix, AZ",
+    "salary": "$45K - $55K",
+    "imageUrl":"",
+    "company": {
+      "name": "ManageRight Consulting",
+      "description": "ManageRight Consulting provides project management solutions to help organizations streamline their operations.",
+      "contactEmail": "hr@manageright.com",
+      "contactPhone": "555-667-7788"
+    }
+  },
+  {
+    "id": "16",
+    "title": "Digital Marketing Specialist",
+    "type": "Full-Time",
+    "description": "We are looking for a Digital Marketing Specialist to manage our online campaigns and analytics. Proficiency in SEO and Google Analytics is required.",
+    "location": "Miami, FL",
+    "salary": "$50K - $60K",
+    "imageUrl":"",
+    "company": {
+      "name": "ClickBuzz Marketing",
+      "description": "ClickBuzz Marketing specializes in digital marketing, helping clients increase their online presence and customer engagement.",
+      "contactEmail": "apply@clickbuzz.com",
+      "contactPhone": "555-778-8899"
+    }
+  },
+  {
+    "id": "17",
+    "title": "Financial Analyst",
+    "type": "Full-Time",
+    "description": "Seeking a Financial Analyst to evaluate financial data and prepare reports. Experience in financial modeling and Excel is essential.",
+    "location": "Charlotte, NC",
+    "salary": "$70K - $80K",
+    "imageUrl":"",
+    "company": {
+      "name": "FinancePros",
+      "description": "FinancePros is a financial consulting firm that provides analysis and strategic guidance to businesses.",
+      "contactEmail": "recruitment@financepros.com",
+      "contactPhone": "555-889-9900"
+    }
+  },
+  {
+    "id": "18",
+    "title": "Java Developer",
+    "type": "Full-Time",
+    "description": "We are seeking a Java Developer with expertise in Spring Framework and RESTful API development to join our backend team.",
+    "location": "Houston, TX",
+    "salary": "$80K - $90K",
+    "imageUrl":"",
+    "company": {
+      "name": "TechDrive Solutions",
+      "description": "TechDrive Solutions focuses on software development and systems integration, specializing in Java-based applications.",
+      "contactEmail": "jobs@techdrive.com",
+      "contactPhone": "555-990-0011"
+    }
+  },
+  {
+    "id": "19",
+    "title": "Office Administrator",
+    "type": "Part-Time",
+    "description": "Responsible for managing office supplies, scheduling appointments, and assisting with administrative tasks. Prior office experience preferred.",
+    "location": "Orlando, FL",
+    "salary": "$35K - $40K",
+    "imageUrl":"",
+    "company": {
+      "name": "Office Solutions Co.",
+      "description": "Office Solutions Co. provides administrative and logistical support for companies of all sizes.",
+      "contactEmail": "info@officesolutions.com",
+      "contactPhone": "555-123-4568"
+    }
+  },
+  {
+    "id": "20",
+    "title": "Social Media Manager",
+    "type": "Full-Time",
+    "description": "Seeking a Social Media Manager to develop and manage social media content across platforms. Experience with content creation tools required.",
+    "location": "New Orleans, LA",
+    "salary": "$50K - $60K",
+    "imageUrl":"",
+    "company": {
+      "name": "SocialSphere",
+      "description": "SocialSphere specializes in social media strategy and content creation, helping brands grow their online presence.",
+      "contactEmail": "social@sphere.com",
+      "contactPhone": "555-234-5678"
+    }
+  }
+]
