@@ -1,8 +1,10 @@
 import express from "express";
-import { createJob } from "../controllers/jobController.js";
+import { createJob,getJobs } from "../controllers/jobController.js";
+import protect from "../middleware/protect.js";
 
 const router = express.Router();
 
-router.post("/jobs", createJob);
+router.post("/jobs",protect, createJob);
+router.get("/jobs", getJobs);
 
 export default router;
