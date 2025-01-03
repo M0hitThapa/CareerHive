@@ -70,7 +70,10 @@ export const createJob = asyncHandler(async(req,res) => {
 
 export const getJobs = asyncHandler(async(req,res) => {
   try {
-    const jobs = await Job.find({});
+   const jobs = await Job.find({}).populate(
+    "createdBy",
+    "name email profilePicture"
+   );
 
     console.log("Jobs: ", jobs);
   } catch (error) {
