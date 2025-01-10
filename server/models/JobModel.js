@@ -1,70 +1,67 @@
 import mongoose from "mongoose";
 
-
-const JobSchema = new mongoose.Schema({
-
+// Define the Job Schema
+const JobSchema = new mongoose.Schema(
+  {
     title: {
-        type: String,
-        required: true,
+      type: String,
+      required: true,
     },
     location: {
-        type: String,
-        default: "Remote",
+      type: String,
+      default: "Remote",
     },
     salary: {
-        type: Number,
-        required: true,
+      type: Number,
+      required: true,
     },
     salaryType: {
-        type: String,
-        default: "Year",
+      type: String,
+      default: "Year",
     },
-    negtiable: {
-        type: Boolean,
-        default: false,
+    negotiable: {
+      type: Boolean,
+      default: false,
     },
     jobType: [
-        {
-            type: String,
-            required: true,
-        },
-    ],
-    description: {
+      {
         type: String,
         required: true,
+      },
+    ],
+    description: {
+      type: String,
+      required: true,
     },
     tags: [
-        {
-            type: String,
-        },
-      
+      {
+        type: String,
+      },
     ],
-
     skills: [
-        {
-            type: String,
-            required: true,
-        },
+      {
+        type: String,
+        required: true,
+      },
     ],
     likes: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User",
-        },
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
     ],
     createdBy: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
     },
-
     applicants: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User",
-        },
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
     ],
-},
-{ timestamps: true }
+  },
+  { timestamps: true }
 );
 
 const Job = mongoose.model("Job", JobSchema);

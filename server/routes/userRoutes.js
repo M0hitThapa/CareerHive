@@ -1,19 +1,16 @@
 import express from "express";
-import { getUserProfile } from "../controllers/userController.js";
+import { registerUser, loginUser, getUserProfile } from "../controllers/userController.js";
+import protect from "../middleware/protect.js"; // A middleware to protect routes
 
 const router = express.Router();
 
-router.get("/check-auth", (req,res) => {
-    if(req.oidc.isAuthenticated()) {
-        return res.status(200).json({
-            isAuthenticated: true,
-            user: req.oidc.user,
-        })
-    } else{
-        return res.status(200).json(false);
-    }
-})
+// Register a new user
+router.post("/register", registerUser);
 
-router.get("/user/:id", getUserProfile);
+// Login the user
+router.post("/login", loginUser);
+
+// Get user profile (protected route)
+router.get("/profile", protect, getUserProfile);
 
 export default router;

@@ -1,94 +1,122 @@
 import express from "express";
-import { auth } from "express-openid-connect";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import connect from "./db/connect.js"
+import connect from "./db/connect.js";
 import fs from "fs";
 import User from "./models/UserModel.js";
 import asyncHandler from "express-async-handler";
+import jwt from "jsonwebtoken";
 
 dotenv.config();
 
-
 const app = express();
 
+// JWT Secret Key
+const JWT_SECRET = process.env.JWT_SECRET;
 
-const config = {
-  authRequired: false,
-  auth0Logout: true,
-  baseURL: process.env.BASE_URL,
-  clientID: process.env.CLIENT_ID,
-  issuerBaseURL: process.env.ISSUER_BASE_URL,
-  secret: process.env.SECRET,
-};
-app.use(cors({
-   origin: process.env.CLIENT_URL,
-   credentials: true,
-}))
-app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+// Middleware to parse cookies
 app.use(cookieParser());
-app.use(auth(config))
 
-const ensureUSerInDB = asyncHandler(async(user) => {
-   try {
-      const existingUser = await User.findOne({auth0Id: user.sub });
+// CORS setup
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+  credentials: true,
+}));
 
-      if(!existingUser) {
+// Middleware for JSON request parsing
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-         const newUser = new User({
-            auth0Id: user.sub,
-            email: user.email,
-            name: user.name,
-            role: "jobseeker",
-            profilePicture: user.picture,
+// JWT Authentication Middleware
+const protect = async (req, res, next) => {
+  const token = req.headers.authorization && req.headers.authorization.split(" ")[1]; // Token in the "Authorization" header
 
-         });
+  if (!token) {
+    return res.status(401).json({ message: "No token, authorization denied" });
+  }
 
-         await newUser.save();
+  try {
+    // Verify JWT token
+    const decoded = jwt.verify(token, JWT_SECRET);
+    req.user = decoded; // Attach decoded user info to the request
+    next();
+  } catch (error) {
+    res.status(401).json({ message: "Invalid token" });
+  }
+};
 
-         console.log("User added to db", user);
-      } else {
-         console.log("User already exist in db", existingUser)
-      }
-   } catch (error) {
-      console.log("Error checking to db", error.message);
-   }
+// User login route (Generate JWT)
+app.post("/api/v1/login", asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+
+  // Check if the user exists
+  const user = await User.findOne({ email });
+
+  if (!user || user.password !== password) {
+    return res.status(400).json({ message: "Invalid credentials" });
+  }
+
+  // Create JWT payload
+  const payload = {
+    userId: user._id,
+    email: user.email,
+    role: user.role,
+  };
+
+  // Generate JWT token
+  const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' });
+
+  res.status(200).json({
+    message: "Login successful",
+    token,
+  });
+}));
+
+// Ensure user exists in DB middleware
+const ensureUserInDB = asyncHandler(async (user) => {
+  try {
+    const existingUser = await User.findOne({ email: user.email });
+
+    if (!existingUser) {
+      const newUser = new User({
+        email: user.email,
+        name: user.name,
+        role: "jobseeker",
+      });
+
+      await newUser.save();
+      console.log("User added to db:", user);
+    } else {
+      console.log("User already exists in db:", existingUser);
+    }
+  } catch (error) {
+    console.log("Error checking user in DB:", error.message);
+  }
 });
 
-app.get("/", async(req,res) => {
-   if(req.oidc.isAuthenticated()) {
-      await ensureUSerInDB(req.oidc.user);
-      return res.redirect(process.env.CLIENT_URL);
-   } else{
-      return res.send("Logged Out");
-   }
-})
-
-
+// Routes setup
 const routeFiles = fs.readdirSync("./routes");
 
 routeFiles.forEach((file) => {
-   import(`./routes/${file}`).then((route) => {
-      app.use("/api/v1/", route.default);
-   }).catch((error) => {
-      console.log("Error importing route", error);
-   })
-})
+  import(`./routes/${file}`).then((route) => {
+    app.use("/api/v1/", route.default);
+  }).catch((error) => {
+    console.log("Error importing route:", error);
+  });
+});
 
+// Server start
 const server = async () => {
-   
- 
-   try {
-      await connect();  
-      app.listen(process.env.PORT, () => {
-         console.log(`Server is running on port ${process.env.PORT}`)
-      })
-   } catch (error) {
-      console.log("server error", error.message);
-      process.exit(1);
-   }
-}
+  try {
+    await connect();
+    app.listen(process.env.PORT, () => {
+      console.log(`Server is running on port ${process.env.PORT}`);
+    });
+  } catch (error) {
+    console.log("Server error:", error.message);
+    process.exit(1);
+  }
+};
 
-export default server();
+server();
